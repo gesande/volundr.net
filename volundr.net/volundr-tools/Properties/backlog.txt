@@ -1,0 +1,20 @@
+﻿DONE:
+string-to-bytes
+bytes-to-string
+linereader
+statistics (first version using List<Int32>)
+valueof
+stream-to-lines
+string-to-stream
+string-to-memorystream
+concurrent (thread engine)
+as-expected (phase 1)
+string-splitter (empty is not empty...)
+concurrent
+
+IN PROGRESS
+gzip stream to lines impl
+
+WAITING
+as-expected (phase 2, fix output, introduce own AssertionException, see java implementation)
+statistics (treebag version, C5 lib?)

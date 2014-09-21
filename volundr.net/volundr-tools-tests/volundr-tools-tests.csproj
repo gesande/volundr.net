@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0F71EC2-082A-453E-8446-B05219F7F6CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>exampletests</RootNamespace>
+    <AssemblyName>example-tests</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework" />
+    <Reference Include="Mono.C5" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="net.sf.volundr.valueof\ValueOfFactoryTest.cs" />
+    <Compile Include="net.sf.volundr.statistics\PercentileRankCalculatorTest.cs" />
+    <Compile Include="net.sf.volundr.statistics\StatisticsCalculatorTest.cs" />
+    <Compile Include="net.sf.volundr.io\StringToMemoryStreamTest.cs" />
+    <Compile Include="net.sf.volundr.io\StringToMemoryStreamBuildertest.cs" />
+    <Compile Include="net.sf.volundr.io\LineReaderTest.cs" />
+    <Compile Include="net.sf.volundr\BytesToStringTest.cs" />
+    <Compile Include="net.sf.volundr\StringToBytesTest.cs" />
+    <Compile Include="net.sf.volundr.io\VisitingLines.cs" />
+    <Compile Include="net.sf.volundr.concurrent\ThreadEngineTest.cs" />
+    <Compile Include="net.sf.volundr.asexpected\AsExpectedTest.cs" />
+    <Compile Include="net.sf.volundr\StringSplitterTest.cs" />
+    <Compile Include="net.sf.volundr.io\GzipStreamToLinesTest.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\volundr-tools\volundr-tools.csproj">
+      <Project>{E6752F06-9832-42AA-A9BF-40A89AF4CD9C}</Project>
+      <Name>volundr-tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\volundr-asexpected\volundr-asexpected.csproj">
+      <Project>{681487AB-8AE9-48A2-8278-1FAA4FB21E1E}</Project>
+      <Name>volundr-asexpected</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="net.sf.volundr.valueof\" />
+    <Folder Include="net.sf.volundr.statistics\" />
+    <Folder Include="net.sf.volundr.io\" />
+    <Folder Include="net.sf.volundr\" />
+    <Folder Include="net.sf.volundr.concurrent\" />
+    <Folder Include="net.sf.volundr.asexpected\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="backlog.txt" />
+  </ItemGroup>
+</Project>

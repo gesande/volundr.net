@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6752F06-9832-42AA-A9BF-40A89AF4CD9C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>valueof</RootNamespace>
+    <AssemblyName>volundr-tools</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="net.sf.volundr.valueof\AbstractValueOf.cs" />
+    <Compile Include="net.sf.volundr.valueof\ValueOf.cs" />
+    <Compile Include="net.sf.volundr.valueof\StringValueOf.cs" />
+    <Compile Include="net.sf.volundr.valueof\ValueOfFactory.cs" />
+    <Compile Include="net.sf.volundr.statistics\StatisticsCalculator.cs" />
+    <Compile Include="net.sf.volundr.statistics\PercentileRankCalculator.cs" />
+    <Compile Include="net.sf.volundr.statistics\MedianResolver.cs" />
+    <Compile Include="net.sf.volundr.io\StringToStream.cs" />
+    <Compile Include="net.sf.volundr.io\StringToMemoryStream.cs" />
+    <Compile Include="net.sf.volundr.io\StringToBuilderStreamBuilder.cs" />
+    <Compile Include="net.sf.volundr.io\LineReader.cs" />
+    <Compile Include="net.sf.volundr.io\LineVisitor.cs" />
+    <Compile Include="net.sf.volundr\StringToBytes.cs" />
+    <Compile Include="net.sf.volundr\BytesToString.cs" />
+    <Compile Include="net.sf.volundr.io\StreamToLines.cs" />
+    <Compile Include="net.sf.volundr.concurrent\ThreadEngine.cs" />
+    <Compile Include="net.sf.volundr.concurrent\ThreadEngineApi.cs" />
+    <Compile Include="net.sf.volundr\StringSplitter.cs" />
+    <Compile Include="net.sf.volundr.io\GzipStreamToLines.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="net.sf.volundr.valueof\" />
+    <Folder Include="net.sf.volundr\" />
+    <Folder Include="net.sf.volundr.statistics\" />
+    <Folder Include="net.sf.volundr.io\" />
+    <Folder Include="net.sf.volundr.concurrent\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\backlog.txt" />
+  </ItemGroup>
+</Project>
