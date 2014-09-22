@@ -1,2 +1,5 @@
-refactoring
-http://monodevelop.com/Documentation/Refactoring
+C# conversion project for Völundr tools project (java)
+  + just clone the repository
+  + project and solutions files are available for mono (only)
+  + install-mono/* will have the necessary stuff for ubuntu and windows
+  + if you want to build with vs, pls contribute to the project
